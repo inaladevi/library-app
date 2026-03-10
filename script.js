@@ -79,7 +79,9 @@ function createBookCard(book) {
   toggleBtn.textContent = "Toggle Status";
   removeBtn.textContent = "Delete";
 
-  bookCard.append(title, author, pages, read, toggleBtn, removeBtn);
+  btnContainer.append(toggleBtn, removeBtn);
+  bookCard.append(title, author, pages, read, btnContainer);
+  
   return bookCard;
 }
 
@@ -111,12 +113,17 @@ libraryContainer.addEventListener("click", function (event) {
 
 bookForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  const title = document.querySelector("#title").value;
-  const author = document.querySelector("#author").value;
-  const pages = document.querySelector("#pages").value;
-  const read = document.querySelector("#read").checked;
+  const title = document.querySelector("#title");
+  const author = document.querySelector("#author");
+  const pages = document.querySelector("#pages");
+  const read = document.querySelector("#read");
 
-  addBookToLibrary(title, author, pages, read);
+  addBookToLibrary(
+    titleInput.value,
+    authorInput.value,
+    pagesInput.value,
+    readInput.checked,
+  );
   bookForm.reset();
   bookForm.classList.add("hidden");
 });

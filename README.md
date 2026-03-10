@@ -3,7 +3,8 @@
 A clean, editorial-inspired book tracking application designed for a focused reading experience.  
 This project emphasizes **Object-Oriented JavaScript**, memory-efficient **Prototypes**, and persistent data management using the **Web Storage API**.
 
-The dashboard allows users to manage their collection through a custom-built "Data Layer" that syncs seamlessly with a responsive CSS Grid interface.
+The application separates data management from UI rendering,
+allowing the book collection (stored in an array) to dynamically generate the interface.
 
 ## Live Demo
 
@@ -19,14 +20,8 @@ The dashboard allows users to manage their collection through a custom-built "Da
   - Custom status badges (Read vs. Not Read).
   - Toggle functionality to flip reading status instantly.
   - Hover elevation effects.
-- **Smart Form Handling**:
-  - Floating "New Book" toggle to keep the workspace clean.
   - `preventDefault()` integration for smooth, no-refresh data entry.
 - **Performance Optimized** via **Event Delegation** on the main library container.
-- **Editorial Aesthetic** inspired by classic archives, featuring:
-  - Sophisticated "Cream & Midnight" color palette.
-  - High-contrast typography (Libre Baskerville & Inter).
-  - Responsive CSS Grid that adapts to any screen size.
 
 ## Built With
 
