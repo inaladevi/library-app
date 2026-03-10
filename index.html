@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <title>Library App</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,6 +12,23 @@
 <h1>My Library</h1>
 
 <button id="newBookBtn">New Book</button>
+
+<form id="bookForm" class="hidden">
+
+  <input type="text" id="title" placeholder="Title" required>
+
+  <input type="text" id="author" placeholder="Author" required>
+
+  <input type="number" id="pages" placeholder="Pages" required>
+
+  <label>
+    Read
+    <input type="checkbox" id="read">
+  </label>
+
+  <button type="submit">Add Book</button>
+
+</form>
 
 <div id="library"></div>
 
